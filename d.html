@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們｜軍一補救教室</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="light-mode">
+  <div class="container">
+    <a href="a.html" class="corner-btn">回首頁</a>
+    <button class="theme-toggle">切換背景色</button>
+
+    <div id="contact-section">
+      <h1 class="main-title">聯絡我們</h1>
+
+      <p class="subtitle">
+        如果您有課程相關問題、合作提案，或想了解更多補救教學方案，
+        歡迎留下訊息，我們將儘速回覆！
+      </p>
+
+      <form id="contact-form" class="form-card">
+        <label>姓名：</label>
+        <input type="text" id="name" placeholder="請輸入您的姓名" required>
+
+        <label>Email：</label>
+        <input type="email" id="email" placeholder="請輸入電子郵件" required>
+
+        <label>訊息內容：</label>
+        <textarea id="message" rows="4" placeholder="請輸入您想諮詢的內容" required></textarea>
+
+        <button type="submit" class="btn">送出</button>
+      </form>
+
+      <div id="thank-you" class="hidden">
+        <h2>感謝您的填寫！</h2>
+        <p>我們已收到您的訊息，將在 2～3 個工作天內回覆。</p>
+        <a href="a.html" class="btn">回到首頁</a>
+      </div>
+    </div>
+
+    <footer>© 2025 軍一補救教室 JunYi Learning Studio</footer>
+  </div>
+</body>
+</html>

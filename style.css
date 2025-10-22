@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Playfair+Display:wght@600&family=Noto+Sans+TC:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s, color 0.4s;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-image, .video-box {
+  width: 60%;
+  max-width: 600px;
+  margin: 1rem auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 60%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #32CD32;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.corner-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #32CD32;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.corner-btn:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #32CD32;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.form-card {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.form-card label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.nav-buttons-large {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  display: inline-block;
+  background: #32CD32;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.btn-large:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+.intro-section, .philosophy-section {
+  text-align: left;
+  width: 80%;
+  margin: 3rem auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.video-section {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.video-item video {
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.video-caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+/* ==============================
+   全螢幕影片區樣式
+   ============================== */
+.hero-video-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+}
+
+.overlay .main-title {
+  font-size: 3.5rem;
+  color: #FFD700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+.overlay .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.nav-buttons-large {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.btn-large {
+  display: inline-block;
+  background: #32CD32;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.2rem 2.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.btn-large:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #32CD32;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+/* ==============================
+   下方文字內容區域
+   ============================== */
+.container {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.intro-section, .philosophy-section {
+  text-align: left;
+  width: 85%;
+  margin: 3rem auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   響應式設計 (手機)
+   ============================== */
+@media (max-width: 768px) {
+  .overlay .main-title {
+    font-size: 2.3rem;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1rem 1.8rem;
+  }
+
+  .overlay .subtitle {
+    font-size: 1rem;
+    width: 90%;
+  }
+}
+/* ==============================
+   圖文混排區塊
+   ============================== */
+.flex-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.flex-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1.2;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  object-fit: cover;
+}
+
+/* 紅底白字重點強調 */
+.highlight {
+  background-color: #C40000;
+  color: #FFFFFF;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* 響應式設計 */
+@media (max-width: 900px) {
+  .flex-section {
+    flex-direction: column;
+  }
+
+  .image-content img {
+    max-width: 90%;
+    margin-top: 1rem;
+  }
+
+  .text-content {
+    text-align: left;
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>立即報名｜軍一補救教室</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="light-mode">
+  <div class="container">
+    <a href="a.html" class="corner-btn">回首頁</a>
+    <button class="theme-toggle">切換背景色</button>
+
+    <h1 class="main-title">報名表單</h1>
+
+    <form class="form-card">
+      <label>姓名：</label>
+      <input type="text" placeholder="請輸入姓名" required>
+
+      <label>聯絡電話：</label>
+      <input type="tel" placeholder="例如：0912-345-678" required>
+
+      <label>欲報名課程：</label>
+      <select required>
+        <option value="">請選擇</option>
+        <option>數位邏輯補救班</option>
+        <option>微處理機補救班</option>
+        <option>數學補救班</option>
+        <option>基本電學補救班</option>
+        <option>電子學補救班</option>
+        <option>英文補救班</option>
+         <option>國文補救班</option>
+      </select>
+
+      <label>備註：</label>
+      <textarea rows="4" placeholder="可填寫希望上課時間或其他需求"></textarea>
+
+      <button type="submit" class="btn">送出報名</button>
+    </form>
+  </div>
+</body>
+</html>
