@@ -136,6 +136,7 @@ a {
   gap: 2.5rem;
   margin-bottom: 4rem;
 }
+
 .flex-section.reverse { flex-direction: row-reverse; }
 
 .text-content {
@@ -144,14 +145,18 @@ a {
   line-height: 1.8;
   text-align: left;
 }
+
 .image-content {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
+
 .image-content img {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   object-fit: cover;
@@ -229,8 +234,8 @@ a {
   margin-top: 0.5rem;
   border-radius: 8px;
   border: none;
-  background: rgba(255,255,255,0.15);
-  color: #fff;
+  background: rgba(247, 245, 245, 0.97);
+  color: #1401012f;
   font-size: 1rem;
   outline: none;
   transition: background 0.2s, box-shadow 0.2s;
@@ -238,7 +243,7 @@ a {
 .form-card input:focus,
 .form-card select:focus,
 .form-card textarea:focus {
-  background: rgba(255,255,255,0.25);
+  background: rgba(74, 48, 48, 0.114);
   box-shadow: 0 0 6px #FFD700;
 }
 .form-card button.btn {
@@ -287,10 +292,35 @@ footer {
     padding: 0.8rem 1.5rem;
   }
 
-  .flex-section { flex-direction: column; }
-  .image-content img { max-width: 100%; margin-top: 1rem; }
+  /* ✅ 修正手機圖片壓文字問題 */
+  .flex-section {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: left;
+  }
 
-  .text-content { font-size: 1rem; }
+  .text-content {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+
+  .image-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .image-content img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
 
   .form-card {
     width: 90%;
